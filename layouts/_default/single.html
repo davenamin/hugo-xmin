@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <div class="article-meta">
-<h1><span class="title">{{ .Title }} {{with .Params.Draft }}(draft){{end}}</span></h1>
+<h1><span class="title">{{ .Title }}</span> <span class="draft">{{with .Params.Draft }} (draft){{end}}</span></h1>
 {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
 {{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
 {{ with .Params.status }}<h3 class="status">{{ . }}</h3>{{ end }}
